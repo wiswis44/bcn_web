@@ -1,0 +1,183 @@
+/* ---- RESET BÀSIC I GLOBALS ---- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+h1, h2, h3, p {
+    margin: 0;
+}
+img {
+    width: 100%;
+    display: block;
+}
+
+/* ---- 1. HEADER I NAVEGACIÓ ---- */
+.header-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    border-bottom: 1px solid #ccc;
+}
+.nav-menu ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.nav-menu a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+.nav-menu a:hover {
+    color: #0077cc;
+}
+
+/* ---- 2. SECCIÓ HERO ---- */
+.hero-section {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #0077cc;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.hero-section p {
+    margin-top: 10px;
+}
+
+/* ---- 3. SECCIÓ LLOCS (TARGETES) ---- */
+.seccio-llocs {
+    padding: 40px 20px;
+}
+.graella-llocs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.targeta {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ---- 4. SECCIÓ BARRIS ---- */
+.seccio-barris {
+    padding: 40px 20px;
+}
+.barris-container {
+    display: flex;
+    gap: 20px;
+}
+.descripcio-barri {
+    background: white;
+    padding: 20px;
+    flex: 1;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ---- 5. FOOTER ---- */
+.footer-principal {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    margin-top: 40px;
+}
+
+/* ================================
+      RESPONSIVE INDEX
+================================ */
+@media (max-width: 768px) {
+    .graella-llocs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .barris-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-principal {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .graella-llocs {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================================
+      GALERIA.HTML
+================================ */
+.galeria-main {
+    padding: 40px 20px;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* Responsive galeria */
+@media (max-width: 768px) {
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================================
+      CONTACTE.HTML
+================================ */
+.formulari-contacte {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.formulari-contacte label {
+    font-weight: bold;
+}
+.formulari-contacte input,
+.formulari-contacte textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.formulari-contacte button {
+    padding: 12px;
+    background: #0077cc;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.formulari-contacte button:hover {
+    background: #005fa3;
+}
+
+/* Responsive formulari */
+@media (max-width: 480px) {
+    .formulari-contacte {
+        width: 90%;
+    }
+}
